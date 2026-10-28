@@ -1,0 +1,35 @@
+name: 缺陷反馈
+description: 闪退、报错、显示不对、数据对不上
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        学校系统本身挂了请用「校园系统状态」。别贴密码、Cookie、完整学号，截图记得打码。
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 出了什么问题
+      description: 在哪个页面、做了什么、看到了什么。能稳定复现的话顺手写下步骤。
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本
+      description: 设置 → 关于 里能看到
+      placeholder: 例如 5.2.1 或 5.2.1-dev.225
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 机型与系统
+      placeholder: 例如 小米 15，Android 16
+  - type: textarea
+    id: log
+    attributes:
+      label: 崩溃日志或报错原文
+      description: 没有就空着
+      render: text
